@@ -1,62 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Accordion from "./components/Accordion/Accordion";
+import {Rating} from "./components/Rating/Rating";
 
 function App() {
     console.log("App rendering")
     return (
         <div>
-            <AppTitle />
-            <Rating />
-            <Accordion />
-            <Rating />
+            <PageTitle title={"This is APP component"}/>
+            <PageTitle title={"My friends"}/>
+            Article 1
+            <Rating value={1}/>
+            <Accordion titleValue={"Menu"} collapsed={false}/>
+            <Accordion titleValue={"Users"} collapsed={true}/>
+            Article 2
+            <Rating value={3}/>
         </div>
     )
 }
-
-function AppTitle() {
-    console.log("AppTitle rendering")
-    return <>This is APP component</>
+type PageTitlePropsType = {
+    title: string
+}
+function PageTitle(props: PageTitlePropsType) {
+    console.log("PageTitle rendering")
+    return <h1>{props.title}</h1>
 }
 
-function Rating() {
-    console.log("Rating rendering")
-    return (
-        <div>
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-        </div>
-    )
-}
-
-function Accordion() {
-    console.log("Accordion rendering")
-    return (
-        <div>
-            <AccordionTitle/>
-            <AccordionBody/>
-        </div>
-    )
-}
-function AccordionTitle() {
-    console.log("AccordionTitle rendering")
-    return <h3>Меня</h3>
-}
-function AccordionBody(){
-    console.log("AccordionBody rendering")
-    return <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-    </ul>
-}
-
-function Star() {
-    console.log("Star rendering")
-    return <div>star</div>
-}
 
 export default App;
