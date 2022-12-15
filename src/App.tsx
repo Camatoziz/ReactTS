@@ -6,12 +6,12 @@ import {Rating} from "./components/Rating/Rating";
 function App() {
     console.log("App rendering")
     return (
-        <div>
+        <div className="mainPage">
             <PageTitle title={"This is APP component"}/>
             <PageTitle title={"My friends"}/>
             Article 1
             <Rating value={1}/>
-            <Accordion titleValue={"Menu"} collapsed={false}/>
+            <Accordion titleValue={"Menu"} collapsed={true}/>
             <Accordion titleValue={"Users"} collapsed={true}/>
             Article 2
             <Rating value={4}/>
