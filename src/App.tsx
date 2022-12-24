@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
-import UncontrolledAccordion from "./components/Accordion/Accordion";
+
 import {Rating} from "./components/Rating/Rating";
 import {OnOff} from './components/OnOff';
 import {UncontrolledRating} from './components/Rating/UncontrolledRating';
+import {UncontrolledAccordion} from './components/Accordion/Accordion';
 
 function App() {
     console.log("App rendering")

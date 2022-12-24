@@ -4,7 +4,7 @@ type AccordionPropsType = {
     titleValue: string
 
 }
-function Accordion(props: AccordionPropsType) {
+export function UncontrolledAccordion(props: AccordionPropsType) {
     const [collapsed, setCollapsed] = useState(true)
     console.log("Accordion rendering")
           return (
@@ -33,4 +33,3 @@ function AccordionBody() {
     </ul>
 }
 
-export default Accordion;
